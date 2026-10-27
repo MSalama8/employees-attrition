@@ -1,12 +1,26 @@
-# Employee Attrition Analysis
+<p align="center">
+  <img src="assets/banner.svg" alt="Employee Attrition Analysis — Workforce Analytics" width="100%">
+</p>
 
-A data analytics project that explores employee attrition patterns using Python, Pandas, and PostgreSQL. The workflow separates data inspection, preprocessing, database design, and descriptive analysis so each stage can be reviewed and reproduced.
+<p align="center"><strong>Workforce data. Reproducible preparation. Clear, descriptive insights.</strong></p>
 
 ## Overview
 
-The project examines how employee attrition varies across departments, job roles, compensation, overtime, satisfaction, marital status, and tenure. Pandas supports initial data understanding and cleaning, while PostgreSQL organizes the data and supports descriptive analysis.
+Employee Attrition Analysis explores how employee attrition varies across departments, job roles, compensation, overtime, satisfaction, marital status, and tenure. The project combines Python and Pandas for initial data understanding and cleaning with PostgreSQL for relational data design and descriptive analysis.
 
-The results describe patterns in this dataset. They do not establish causation or provide a validated prediction of future employee departures.
+The results describe patterns in the available dataset. They do not establish causation or provide a validated prediction of future employee departures.
+
+## Current Project Scope
+
+### Implemented
+
+- **Data understanding and preprocessing:** Inspect the raw dataset, check missing values and duplicate records, verify employee identifiers, and remove three constant columns using Pandas.
+- **Relational data design:** Organize employee information into related PostgreSQL tables.
+- **Data loading and descriptive SQL analysis:** Load employee data into the relational structure and summarize attrition patterns across workforce characteristics.
+
+### Future Work
+
+Broader exploratory data analysis (EDA), feature engineering, and machine learning are potential next steps. They are not part of the current implemented scope.
 
 ## Dataset
 
@@ -26,7 +40,8 @@ The preprocessing notebook checks data structure, missing values, duplicate reco
 employees-attrition/
 ├── README.md
 ├── assets/
-│   └── employee_attrition_erd.png
+│   ├── banner.svg
+│   └── employee_attrition_erd.svg
 ├── data/
 │   ├── raw/
 │   │   └── employee_attrition_raw.csv
@@ -57,7 +72,7 @@ No rows are removed by the current cleaning step. Potential outliers should be r
 
 ## Database Design
 
-The SQL layer organizes the dataset into six related tables. Each table has a specific responsibility, while primary and foreign keys connect related records for analysis.
+The SQL layer organizes the dataset into six related tables. Each table has a specific responsibility, while keys connect related records for analysis.
 
 | Table | Purpose |
 |---|---|
@@ -70,28 +85,23 @@ The SQL layer organizes the dataset into six related tables. Each table has a sp
 
 ### Entity Relationship Diagram
 
-The diagram shows the main entities, their attributes, and the relationships used to organize employee data.
+The diagram is displayed below for immediate review. It uses Chen-style entities, attributes, and relationship diamonds.
 
 <p align="center">
-  <img src="assets/employee_attrition_erd.png" alt="Employee Attrition Entity Relationship Diagram" width="100%">
+  <img src="assets/employee_attrition_erd.svg" alt="Employee Attrition Entity Relationship Diagram" width="100%">
 </p>
 
-## Analysis Workflow
+## Descriptive Analysis
 
-This project combines data preparation and database analysis rather than focusing on SQL alone.
+The SQL scripts contain descriptive queries for examining attrition rates and comparing groups across department, job role, overtime, compensation, satisfaction, marital status, income range, and tenure. The analysis is exploratory: differences between groups may indicate patterns worth investigating, but they do not prove causation.
 
-- **Data understanding and preprocessing:** Inspect the raw data, check missing values and duplicates, verify employee identifiers, and remove constant columns using Pandas.
-- **Relational data design:** Organize employee information into related PostgreSQL tables.
-- **Descriptive analysis:** Use SQL to summarize attrition patterns across employee and workplace characteristics.
-- **Further analysis:** The cleaned dataset can support additional exploratory data analysis and, later, feature engineering or machine learning if those stages are added to the project.
-
-A useful metric in the analysis is the attrition rate:
+A useful metric is the attrition rate:
 
 ```text
 Attrition Rate (%) = (Employees with Attrition = Yes / Total Employees in the group) × 100
 ```
 
-Counts and rates should be considered together because group sizes differ. These summaries describe associations in the dataset; they do not establish causation.
+Counts and rates should be considered together because group sizes differ.
 
 ## Run Locally
 
@@ -150,8 +160,8 @@ schema.sql → data.sql → queries.sql
 
 ## Interpretation Notes
 
-- **Association is not causation.** Group differences can point to patterns worth investigating, but these queries do not prove that a characteristic causes employee attrition.
-- **Question 9 is a rule-based filter, not a prediction.** It lists current employees who match the selected conditions; it does not calculate a validated future risk score.
+- **Association is not causation.** Group differences can point to patterns worth investigating, but the queries do not prove that a characteristic causes employee attrition.
+- **Rule-based filters are not predictions.** They do not provide a validated future risk score.
 - **Compare counts and rates together.** Group sizes differ, so a high count does not necessarily mean a high attrition rate.
 - **Currency is not specified.** Do not add a currency symbol to income values unless a reliable source confirms the unit.
 
@@ -163,7 +173,3 @@ schema.sql → data.sql → queries.sql
 - [Ali Jabr](https://github.com/agabr7726-sketch) — Contributor
 - [Mostafa Nabil](https://github.com/MostafaNabill1) — Contributor
 - [Abdelrahman](https://github.com/Bodika-dev) — Contributor
-
----
-
-Employee Attrition Analysis
