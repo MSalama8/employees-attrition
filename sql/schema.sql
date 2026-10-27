@@ -34,7 +34,6 @@ CREATE TABLE IF NOT EXISTS job_roles (
 
     job_role_id             INT PRIMARY KEY,
     job_role_name           VARCHAR(100),
-    job_level               INT,
     department_id           INT REFERENCES departments(department_id)
 
 );
@@ -103,7 +102,7 @@ CREATE TABLE IF NOT EXISTS performance (
     environment_satisfaction    INT,
     relationship_satisfaction   INT,
     work_life_balance           INT,
-    job_involvement             INT
+    job_involvement              INT
 
 );
 
