@@ -1,10 +1,10 @@
 # Employee Attrition Analysis
 
-A data analytics project that explores employee attrition patterns using Python, Pandas, and PostgreSQL. The workflow separates raw data, preprocessing, and SQL analysis so each stage can be reviewed and reproduced.
+A data analytics project that explores employee attrition patterns using Python, Pandas, and PostgreSQL. The workflow separates data inspection, preprocessing, database design, and descriptive analysis so each stage can be reviewed and reproduced.
 
 ## Overview
 
-The project examines how employee attrition varies across departments, job roles, compensation, overtime, satisfaction, marital status, and tenure. SQL is used to answer descriptive business questions, while the preprocessing notebook documents initial data checks and cleaning decisions.
+The project examines how employee attrition varies across departments, job roles, compensation, overtime, satisfaction, marital status, and tenure. Pandas supports initial data understanding and cleaning, while PostgreSQL organizes the data and supports descriptive analysis.
 
 The results describe patterns in this dataset. They do not establish causation or provide a validated prediction of future employee departures.
 
@@ -25,6 +25,8 @@ The preprocessing notebook checks data structure, missing values, duplicate reco
 ```text
 employees-attrition/
 ├── README.md
+├── assets/
+│   └── employee_attrition_erd.png
 ├── data/
 │   ├── raw/
 │   │   └── employee_attrition_raw.csv
@@ -55,51 +57,41 @@ No rows are removed by the current cleaning step. Potential outliers should be r
 
 ## Database Design
 
-The SQL layer organizes the dataset into six related tables.
+The SQL layer organizes the dataset into six related tables. Each table has a specific responsibility, while primary and foreign keys connect related records for analysis.
 
 | Table | Purpose |
 |---|---|
-| `departments` | Department identifiers and names |
-| `job_roles` | Job-role names and their departments |
-| `employees` | Employee demographics, tenure, role, and attrition status |
-| `salary_compensation` | Income, pay rates, salary-hike percentage, and stock-option level |
-| `performance` | Satisfaction, performance rating, and work-life balance measures |
-| `attendance_workload` | Overtime, business travel, commuting distance, and training information |
+| `departments` | Stores department identifiers and names. |
+| `job_roles` | Stores job-role identifiers, names, and their associated departments. |
+| `employees` | Stores employee demographics, employment details, job assignment, tenure, and attrition status. |
+| `salary_compensation` | Stores employee income, pay rates, salary-hike percentage, and stock-option level. |
+| `performance` | Stores employee satisfaction, performance ratings, and work-life balance measures. |
+| `attendance_workload` | Stores overtime, business travel, commuting distance, previous employment count, and training information. |
 
-```mermaid
-erDiagram
-    DEPARTMENTS ||--o{ JOB_ROLES : contains
-    DEPARTMENTS ||--o{ EMPLOYEES : includes
-    JOB_ROLES ||--o{ EMPLOYEES : assigned_to
-    EMPLOYEES ||--o| SALARY_COMPENSATION : has
-    EMPLOYEES ||--o| PERFORMANCE : has
-    EMPLOYEES ||--o| ATTENDANCE_WORKLOAD : has
-```
+### Entity Relationship Diagram
 
-## SQL Business Questions
+The diagram shows the main entities, their attributes, and the relationships used to organize employee data.
 
-The queries are maintained in [`sql/queries.sql`](sql/queries.sql). They investigate:
+<p align="center">
+  <img src="assets/employee_attrition_erd.png" alt="Employee Attrition Entity Relationship Diagram" width="100%">
+</p>
 
-1. What is the overall employee attrition rate?
-2. Which departments have the highest attrition rates?
-3. How does attrition vary by job role?
-4. How does attrition compare by overtime status?
-5. How does average monthly income differ between employees who left and those who stayed?
-6. How do job satisfaction and work-life balance compare by attrition status?
-7. How does attrition vary by marital status?
-8. How does attrition vary across monthly-income brackets?
-9. Which current employees match the exploratory rule of working overtime and having a stock-option level of `0`?
-10. How do department headcount and average tenure compare?
+## Analysis Workflow
 
-### Attrition Rate
+This project combines data preparation and database analysis rather than focusing on SQL alone.
 
-For a group, the attrition rate is calculated as:
+- **Data understanding and preprocessing:** Inspect the raw data, check missing values and duplicates, verify employee identifiers, and remove constant columns using Pandas.
+- **Relational data design:** Organize employee information into related PostgreSQL tables.
+- **Descriptive analysis:** Use SQL to summarize attrition patterns across employee and workplace characteristics.
+- **Further analysis:** The cleaned dataset can support additional exploratory data analysis and, later, feature engineering or machine learning if those stages are added to the project.
+
+A useful metric in the analysis is the attrition rate:
 
 ```text
 Attrition Rate (%) = (Employees with Attrition = Yes / Total Employees in the group) × 100
 ```
 
-Counts and rates should be considered together because group sizes differ.
+Counts and rates should be considered together because group sizes differ. These summaries describe associations in the dataset; they do not establish causation.
 
 ## Run Locally
 
@@ -118,7 +110,7 @@ cd employees-attrition
 
 ### 2. Run the preprocessing notebook
 
-Open `notebooks/01_data_preprocessing.ipynb` in Jupyter Notebook or VS Code and run the cells in order. If needed, adjust the CSV paths in the notebook to match the repository layout.
+Open `notebooks/01_data_preprocessing.ipynb` in Jupyter Notebook or VS Code and run the cells in order. Ensure that the input and output paths match the repository structure.
 
 ### 3. Create a PostgreSQL database
 
@@ -144,7 +136,7 @@ psql -d employee_attrition -f sql/data.sql
 
 For local files accessible to the `psql` client, `\\copy` is another option. The current loading script is intended for a fresh database; running it repeatedly without resetting the tables can cause duplicate-key errors or repeated staging data.
 
-### 6. Run the analysis queries
+### 6. Run the SQL analysis
 
 ```bash
 psql -d employee_attrition -f sql/queries.sql
@@ -158,13 +150,6 @@ schema.sql → data.sql → queries.sql
 
 ## Interpretation Notes
 
-- **Association is not causation.** Group differences identify patterns to investigate; they do not prove that a characteristic causes attrition.
-- **Question 9 is a rule-based filter, not a prediction.** It does not calculate a validated future risk score.
-- **Compare counts and rates together.** A higher departure count does not necessarily mean a higher attrition rate.
-- **Currency is unspecified.** Do not add a currency symbol unless the unit is confirmed from a reliable source.
-
-## Interpretation Notes
-
 - **Association is not causation.** Group differences can point to patterns worth investigating, but these queries do not prove that a characteristic causes employee attrition.
 - **Question 9 is a rule-based filter, not a prediction.** It lists current employees who match the selected conditions; it does not calculate a validated future risk score.
 - **Compare counts and rates together.** Group sizes differ, so a high count does not necessarily mean a high attrition rate.
@@ -174,9 +159,9 @@ schema.sql → data.sql → queries.sql
 
 - [Mohamed Sakr](https://github.com/SakrrDev) — Project Owner
 - [Mohamed Salama](https://github.com/MSalama8) — Contributor
-- [Mostafa Nabil](https://github.com/MostafaNabill1) — Contributor
 - [Goda](https://github.com/Godas2) — Contributor
 - [Ali Jabr](https://github.com/agabr7726-sketch) — Contributor
+- [Mostafa Nabil](https://github.com/MostafaNabill1) — Contributor
 - [Abdelrahman](https://github.com/Bodika-dev) — Contributor
 
 ---
