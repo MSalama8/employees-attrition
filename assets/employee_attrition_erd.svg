@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1020" viewBox="0 0 1800 1020" role="img" aria-labelledby="erdTitle erdDesc">
+<title id="erdTitle">Employee Attrition Entity Relationship Diagram</title>
+<desc id="erdDesc">Chen-style ER diagram showing Employee, Department, Job Roles, Performance, Salary Compensation, and Attendance Workload with attributes and relationships.</desc>
+<defs>
+  <style>
+    .connector{stroke:#8293A3;stroke-width:1.55;fill:none;stroke-linecap:round}
+    .entity{fill:#F7FAFC;stroke:#31475C;stroke-width:2}
+    .entity-inner{fill:none;stroke:#31475C;stroke-width:1.4}
+    .entity-label{font-family:Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:.6px;fill:#1E3348}
+    .attribute{fill:#FFFFFF;stroke:#708395;stroke-width:1.5}
+    .attribute-label{font-family:Arial,sans-serif;font-size:12px;fill:#33485B}
+    .relationship{fill:#E8F5F2;stroke:#4C9188;stroke-width:1.7}
+    .relationship-inner{fill:none;stroke:#4C9188;stroke-width:1.25}
+    .relationship-label{font-family:Arial,sans-serif;font-size:12px;font-weight:600;fill:#234C4B}
+  </style>
+</defs>
+<rect width="1800" height="1020" fill="#FFFFFF"/>
+<path d="M30 85 H1770" stroke="#E4EAF0" stroke-width="1"/>
+<text x="50" y="52" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#20364B">EMPLOYEE ATTRITION</text>
+<text x="50" y="72" font-family="Arial,sans-serif" font-size="12" letter-spacing="1.5" fill="#687D8E">ENTITY RELATIONSHIP DIAGRAM · CHEN NOTATION</text>
+<line x1="390" y1="300" x2="270" y2="210" class="connector"/>
+<line x1="390" y1="300" x2="465" y2="210" class="connector"/>
+<line x1="860" y1="420" x2="790" y2="220" class="connector"/>
+<line x1="860" y1="420" x2="945" y2="240" class="connector"/>
+<line x1="860" y1="420" x2="660" y2="260" class="connector"/>
+<line x1="860" y1="420" x2="585" y2="325" class="connector"/>
+<line x1="860" y1="420" x2="555" y2="395" class="connector"/>
+<line x1="860" y1="420" x2="600" y2="465" class="connector"/>
+<line x1="860" y1="420" x2="700" y2="510" class="connector"/>
+<line x1="860" y1="420" x2="850" y2="535" class="connector"/>
+<line x1="860" y1="420" x2="985" y2="495" class="connector"/>
+<line x1="860" y1="420" x2="1070" y2="445" class="connector"/>
+<line x1="860" y1="420" x2="1120" y2="375" class="connector"/>
+<line x1="860" y1="420" x2="1105" y2="305" class="connector"/>
+<line x1="860" y1="420" x2="995" y2="215" class="connector"/>
+<line x1="860" y1="420" x2="900" y2="165" class="connector"/>
+<line x1="860" y1="420" x2="1055" y2="165" class="connector"/>
+<line x1="390" y1="555" x2="215" y2="560" class="connector"/>
+<line x1="390" y1="555" x2="390" y2="665" class="connector"/>
+<line x1="390" y1="555" x2="565" y2="610" class="connector"/>
+<line x1="320" y1="800" x2="165" y2="715" class="connector"/>
+<line x1="320" y1="800" x2="120" y2="800" class="connector"/>
+<line x1="320" y1="800" x2="145" y2="885" class="connector"/>
+<line x1="320" y1="800" x2="320" y2="940" class="connector"/>
+<line x1="320" y1="800" x2="485" y2="910" class="connector"/>
+<line x1="320" y1="800" x2="520" y2="830" class="connector"/>
+<line x1="320" y1="800" x2="475" y2="735" class="connector"/>
+<line x1="865" y1="815" x2="680" y2="710" class="connector"/>
+<line x1="865" y1="815" x2="665" y2="815" class="connector"/>
+<line x1="865" y1="815" x2="710" y2="920" class="connector"/>
+<line x1="865" y1="815" x2="865" y2="965" class="connector"/>
+<line x1="865" y1="815" x2="1030" y2="930" class="connector"/>
+<line x1="865" y1="815" x2="1075" y2="830" class="connector"/>
+<line x1="865" y1="815" x2="1050" y2="720" class="connector"/>
+<line x1="1510" y1="430" x2="1300" y2="520" class="connector"/>
+<line x1="1510" y1="430" x2="1320" y2="600" class="connector"/>
+<line x1="1510" y1="430" x2="1365" y2="320" class="connector"/>
+<line x1="1510" y1="430" x2="1545" y2="310" class="connector"/>
+<line x1="1510" y1="430" x2="1725" y2="410" class="connector"/>
+<line x1="1510" y1="430" x2="1680" y2="535" class="connector"/>
+<line x1="860" y1="420" x2="620" y2="340" class="connector"/>
+<line x1="620" y1="340" x2="390" y2="300" class="connector"/>
+<line x1="390" y1="300" x2="390" y2="425" class="connector"/>
+<line x1="390" y1="425" x2="390" y2="555" class="connector"/>
+<line x1="860" y1="420" x2="610" y2="515" class="connector"/>
+<line x1="610" y1="515" x2="390" y2="555" class="connector"/>
+<line x1="860" y1="420" x2="585" y2="620" class="connector"/>
+<line x1="585" y1="620" x2="320" y2="800" class="connector"/>
+<line x1="860" y1="420" x2="865" y2="625" class="connector"/>
+<line x1="865" y1="625" x2="865" y2="815" class="connector"/>
+<line x1="860" y1="420" x2="1190" y2="430" class="connector"/>
+<line x1="1190" y1="430" x2="1510" y2="430" class="connector"/>
+<rect x="300" y="266" width="180" height="68" rx="1" class="entity"/><text x="390" y="305" text-anchor="middle" class="entity-label">DEPARTMENT</text>
+<rect x="784" y="388" width="152" height="64" rx="1" class="entity"/><text x="860" y="425" text-anchor="middle" class="entity-label">EMPLOYEE</text>
+<rect x="304" y="521" width="172" height="68" rx="1" class="entity"/><text x="390" y="560" text-anchor="middle" class="entity-label">JOB ROLES</text>
+<rect x="226" y="764" width="188" height="72" rx="1" class="entity"/><rect x="231" y="769" width="178" height="62" rx="1" class="entity-inner"/><text x="320" y="805" text-anchor="middle" class="entity-label">PERFORMANCE</text>
+<rect x="750" y="776" width="230" height="78" rx="1" class="entity"/><rect x="755" y="781" width="220" height="68" rx="1" class="entity-inner"/><text x="865" y="820" text-anchor="middle" class="entity-label">SALARY COMPENSATION</text>
+<rect x="1400" y="391" width="220" height="78" rx="1" class="entity"/><rect x="1405" y="396" width="210" height="68" rx="1" class="entity-inner"/><text x="1510" y="435" text-anchor="middle" class="entity-label">ATTENDANCE WORKLOAD</text>
+<polygon points="620,311 675,340 620,369 565,340" class="relationship"/><text x="620" y="344" text-anchor="middle" class="relationship-label">works in</text>
+<polygon points="390,396 445,425 390,454 335,425" class="relationship"/><text x="390" y="429" text-anchor="middle" class="relationship-label">has roles</text>
+<polygon points="610,486 665,515 610,544 555,515" class="relationship"/><text x="610" y="519" text-anchor="middle" class="relationship-label">works as</text>
+<polygon points="585,591 628,620 585,649 542,620" class="relationship"/><polygon points="585,596 620,620 585,644 550,620" class="relationship-inner"/><text x="585" y="624" text-anchor="middle" class="relationship-label">has</text>
+<polygon points="865,596 920,625 865,654 810,625" class="relationship"/><polygon points="865,601 912,625 865,649 818,625" class="relationship-inner"/><text x="865" y="629" text-anchor="middle" class="relationship-label">receives</text>
+<polygon points="1190,401 1233,430 1190,459 1147,430" class="relationship"/><polygon points="1190,406 1225,430 1190,454 1155,430" class="relationship-inner"/><text x="1190" y="434" text-anchor="middle" class="relationship-label">has</text>
+<ellipse cx="270" cy="210" rx="86" ry="25" class="attribute"/><text x="270" y="214" text-anchor="middle" class="attribute-label"><tspan text-decoration="underline">department_id (PK)</tspan><tspan></tspan></text>
+<ellipse cx="465" cy="210" rx="90" ry="25" class="attribute"/><text x="465" y="214" text-anchor="middle" class="attribute-label">department_name</text>
+<ellipse cx="790" cy="220" rx="82" ry="25" class="attribute"/><text x="790" y="224" text-anchor="middle" class="attribute-label"><tspan text-decoration="underline">employee_id (PK)</tspan><tspan></tspan></text>
+<ellipse cx="945" cy="240" rx="62" ry="24" class="attribute"/><text x="945" y="244" text-anchor="middle" class="attribute-label">attrition</text>
+<ellipse cx="660" cy="260" rx="42" ry="24" class="attribute"/><text x="660" y="264" text-anchor="middle" class="attribute-label">age</text>
+<ellipse cx="585" cy="325" rx="55" ry="24" class="attribute"/><text x="585" y="329" text-anchor="middle" class="attribute-label">gender</text>
+<ellipse cx="555" cy="395" rx="90" ry="25" class="attribute"/><text x="555" y="399" text-anchor="middle" class="attribute-label">education_field</text>
+<ellipse cx="600" cy="465" rx="85" ry="25" class="attribute"/><text x="600" y="469" text-anchor="middle" class="attribute-label">education_level</text>
+<ellipse cx="700" cy="510" rx="78" ry="25" class="attribute"/><text x="700" y="514" text-anchor="middle" class="attribute-label">marital_status</text>
+<ellipse cx="850" cy="535" rx="62" ry="24" class="attribute"/><text x="850" y="539" text-anchor="middle" class="attribute-label">job_level</text>
+<ellipse cx="985" cy="495" rx="96" ry="25" class="attribute"/><text x="985" y="499" text-anchor="middle" class="attribute-label">department_id (FK)</text>
+<ellipse cx="1070" cy="445" rx="90" ry="25" class="attribute"/><text x="1070" y="449" text-anchor="middle" class="attribute-label">job_role_id (FK)</text>
+<ellipse cx="1120" cy="375" rx="88" ry="25" class="attribute"/><text x="1120" y="379" text-anchor="middle" class="attribute-label">years_at_company</text>
+<ellipse cx="1105" cy="305" rx="104" ry="25" class="attribute"/><text x="1105" y="309" text-anchor="middle" class="attribute-label">years_in_current_role</text>
+<ellipse cx="995" cy="215" rx="115" ry="25" class="attribute"/><text x="995" y="219" text-anchor="middle" class="attribute-label">years_since_last_promotion</text>
+<ellipse cx="900" cy="165" rx="118" ry="25" class="attribute"/><text x="900" y="169" text-anchor="middle" class="attribute-label">years_with_current_manager</text>
+<ellipse cx="1055" cy="165" rx="94" ry="25" class="attribute"/><text x="1055" y="169" text-anchor="middle" class="attribute-label">total_working_years</text>
+<ellipse cx="215" cy="560" rx="82" ry="25" class="attribute"/><text x="215" y="564" text-anchor="middle" class="attribute-label"><tspan text-decoration="underline">job_role_id (PK)</tspan><tspan></tspan></text>
+<ellipse cx="390" cy="665" rx="78" ry="25" class="attribute"/><text x="390" y="669" text-anchor="middle" class="attribute-label">job_role_name</text>
+<ellipse cx="565" cy="610" rx="94" ry="25" class="attribute"/><text x="565" y="614" text-anchor="middle" class="attribute-label">department_id (FK)</text>
+<ellipse cx="165" cy="715" rx="101" ry="25" class="attribute"/><text x="165" y="719" text-anchor="middle" class="attribute-label"><tspan text-decoration="underline">employee_id (PK, FK)</tspan><tspan></tspan></text>
+<ellipse cx="120" cy="800" rx="112" ry="25" class="attribute"/><text x="120" y="804" text-anchor="middle" class="attribute-label">relationship_satisfaction</text>
+<ellipse cx="145" cy="885" rx="88" ry="25" class="attribute"/><text x="145" y="889" text-anchor="middle" class="attribute-label">job_satisfaction</text>
+<ellipse cx="320" cy="940" rx="94" ry="25" class="attribute"/><text x="320" y="944" text-anchor="middle" class="attribute-label">performance_rating</text>
+<ellipse cx="485" cy="910" rx="91" ry="25" class="attribute"/><text x="485" y="914" text-anchor="middle" class="attribute-label">work_life_balance</text>
+<ellipse cx="520" cy="830" rx="108" ry="25" class="attribute"/><text x="520" y="834" text-anchor="middle" class="attribute-label">environment_satisfaction</text>
+<ellipse cx="475" cy="735" rx="88" ry="25" class="attribute"/><text x="475" y="739" text-anchor="middle" class="attribute-label">job_involvement</text>
+<ellipse cx="680" cy="710" rx="101" ry="25" class="attribute"/><text x="680" y="714" text-anchor="middle" class="attribute-label"><tspan text-decoration="underline">employee_id (PK, FK)</tspan><tspan></tspan></text>
+<ellipse cx="665" cy="815" rx="85" ry="25" class="attribute"/><text x="665" y="819" text-anchor="middle" class="attribute-label">monthly_income</text>
+<ellipse cx="710" cy="920" rx="95" ry="25" class="attribute"/><text x="710" y="924" text-anchor="middle" class="attribute-label">stock_option_level</text>
+<ellipse cx="865" cy="965" rx="82" ry="25" class="attribute"/><text x="865" y="969" text-anchor="middle" class="attribute-label">monthly_rate</text>
+<ellipse cx="1030" cy="930" rx="74" ry="25" class="attribute"/><text x="1030" y="934" text-anchor="middle" class="attribute-label">hourly_rate</text>
+<ellipse cx="1075" cy="830" rx="67" ry="25" class="attribute"/><text x="1075" y="834" text-anchor="middle" class="attribute-label">daily_rate</text>
+<ellipse cx="1050" cy="720" rx="96" ry="25" class="attribute"/><text x="1050" y="724" text-anchor="middle" class="attribute-label">percent_salary_hike</text>
+<ellipse cx="1300" cy="520" rx="101" ry="25" class="attribute"/><text x="1300" y="524" text-anchor="middle" class="attribute-label"><tspan text-decoration="underline">employee_id (PK, FK)</tspan><tspan></tspan></text>
+<ellipse cx="1320" cy="600" rx="61" ry="24" class="attribute"/><text x="1320" y="604" text-anchor="middle" class="attribute-label">overtime</text>
+<ellipse cx="1365" cy="320" rx="80" ry="25" class="attribute"/><text x="1365" y="324" text-anchor="middle" class="attribute-label">business_travel</text>
+<ellipse cx="1545" cy="310" rx="94" ry="25" class="attribute"/><text x="1545" y="314" text-anchor="middle" class="attribute-label">distance_from_home</text>
+<ellipse cx="1725" cy="410" rx="103" ry="25" class="attribute"/><text x="1725" y="414" text-anchor="middle" class="attribute-label">num_companies_worked</text>
+<ellipse cx="1680" cy="535" rx="107" ry="25" class="attribute"/><text x="1680" y="539" text-anchor="middle" class="attribute-label">training_times_last_year</text>
+</svg>
